@@ -196,7 +196,7 @@ span {
     width: 100%;
     height: 250px;
     border-radius: 5px;
-    background-image: url("https://ibb.co/TbQQYdp");
+    background-image: url("../images/pulga.png");
     background-size: cover;
 }
 
@@ -204,7 +204,7 @@ span {
     width: 100%;
     height: 250px;
     border-radius: 5px;
-    background-image: url("https://ibb.co/DfSKrGY");
+    background-image: url("../images/api_js.png");
     background-size: cover;
 }
 
@@ -212,7 +212,7 @@ span {
     width: 100%;
     height: 250px;
     border-radius: 5px;
-    background-image: url("https://ibb.co/Qf2jdM2");
+    background-image: url("../images/vin.png");
     background-size: cover;
 }
 
