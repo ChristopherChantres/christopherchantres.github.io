@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap');
+
+:root {
+    --background-color: #191c32;
+    --fontcolor-green: rgb(0, 255, 13);
+    --color-aqua: aqua;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+}
+
+main {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.thanks {
+    color: var(--fontcolor-green);
+    margin-bottom: 0.5em;
+}
+
+.msg {
+    color: white;
+    margin-bottom: 2em;
+}
+
+.go_home {
+    background-color: var(--color-aqua);
+    color: var(--background-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.go_home:hover {
+    background-color: rgb(0, 255, 170);
+    transition: all 0.5s ease-out;
+}
+
+.go_home:active {
+    background-color: var(--fontcolor-green);
+    transition: all 0.3s ease-out;
+}
+
