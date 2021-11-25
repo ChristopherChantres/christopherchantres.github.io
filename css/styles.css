@@ -196,7 +196,7 @@ span {
     width: 100%;
     height: 250px;
     border-radius: 5px;
-    background-image: url(../images/pulga.png);
+    background-image: url("https://ibb.co/TbQQYdp");
     background-size: cover;
 }
 
@@ -204,7 +204,7 @@ span {
     width: 100%;
     height: 250px;
     border-radius: 5px;
-    background-image: url(../images/api_js.png);
+    background-image: url("https://ibb.co/DfSKrGY");
     background-size: cover;
 }
 
@@ -212,7 +212,7 @@ span {
     width: 100%;
     height: 250px;
     border-radius: 5px;
-    background-image: url(../images/vin.png);
+    background-image: url("https://ibb.co/Qf2jdM2");
     background-size: cover;
 }
 
@@ -466,7 +466,7 @@ footer i {
 
     .about-info {
         margin: 0;
-        padding: ;
+        padding: 10px;
     }
 
     .about-me-img {
