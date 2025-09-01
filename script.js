@@ -98,9 +98,9 @@ const PORTFOLIO_CONFIG = {
             title: 'National iOS Development Lab Hackathon',
             company: 'Apple & Enactus Mexico',
             duration: 'May 2025',
-            description: 'Secured 2nd place in "Best Solution" category for BBV A legal registration automation.',
+            description: 'Secured 2nd place in "Best Solution" category.',
             highlights: [
-                'Engineered MVP serving 3.2 million businesses',
+                'Engineered MVP for BBVA Mexico, serving 3.2 million businesses',
                 'Directed UI/UX design in Figma'
             ],
             tech: ['Swift', 'iOS Development', 'Figma', 'UI/UX']
@@ -144,18 +144,6 @@ const PORTFOLIO_CONFIG = {
             ],
             tech: ['C++', 'Linux', 'Mathematics', 'File I/O'],
             link: 'https://github.com/ChristopherChantres/scientific-calculator'
-        },
-        {
-            title: 'BankPath',
-            type: 'Web Application',
-            description: 'Web application for banking path optimization and financial planning.',
-            highlights: [
-                'Built with modern web technologies',
-                'Focuses on user experience and functionality',
-                'Demonstrates full-stack development skills'
-            ],
-            tech: ['Web Development', 'Full-Stack', 'User Experience'],
-            link: 'https://github.com/marthaheredia48/BankPath/tree/main'
         }
     ]
 };
