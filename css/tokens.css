@@ -1,0 +1,69 @@
+/* Design tokens — theme color palettes and shared values.
+   Dark is the default (green-blue / teal-cyan on near-black). */
+
+:root,
+[data-theme='dark'] {
+  --bg-primary: #070b10;
+  --bg-secondary: #0b1118;
+  --bg-tertiary: #111a23;
+  --surface: #0d151d;
+  --surface-raised: #111c26;
+
+  --text-primary: #e6f1ee;
+  --text-secondary: #9fb2ac;
+  --text-muted: #6b8079;
+
+  --accent-primary: #2dd4bf; /* teal */
+  --accent-secondary: #22d3ee; /* cyan */
+  --accent-soft: rgba(45, 212, 191, 0.12);
+  --accent-border: rgba(45, 212, 191, 0.35);
+
+  --award: #e0b150;
+  --award-soft: rgba(224, 177, 80, 0.12);
+  --award-border: rgba(224, 177, 80, 0.4);
+
+  --border-color: #1b2730;
+  --timeline-track: #1b2730;
+
+  --card-bg: var(--surface);
+  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 18px 40px -18px rgba(0, 0, 0, 0.8);
+
+  --nav-bg: rgba(7, 11, 16, 0.72);
+  --nav-border: rgba(27, 39, 48, 0.8);
+
+  --glow: 0 0 0 1px var(--accent-border), 0 0 24px -6px rgba(45, 212, 191, 0.45);
+}
+
+[data-theme='light'] {
+  --bg-primary: #f6faf9;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #eef4f2;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+
+  --text-primary: #0f1c20;
+  --text-secondary: #3f5a55;
+  --text-muted: #6b827c;
+
+  --accent-primary: #0d9488; /* deeper teal for contrast on light */
+  --accent-secondary: #0891b2;
+  --accent-soft: rgba(13, 148, 136, 0.1);
+  --accent-border: rgba(13, 148, 136, 0.35);
+
+  --award: #b7791f;
+  --award-soft: rgba(183, 121, 31, 0.1);
+  --award-border: rgba(183, 121, 31, 0.4);
+
+  --border-color: #d8e3df;
+  --timeline-track: #d8e3df;
+
+  --card-bg: var(--surface);
+  --card-shadow: 0 1px 3px rgba(15, 28, 32, 0.08);
+  --card-shadow-hover: 0 18px 40px -20px rgba(15, 28, 32, 0.25);
+
+  --nav-bg: rgba(246, 250, 249, 0.8);
+  --nav-border: rgba(216, 227, 223, 0.9);
+
+  --glow: 0 0 0 1px var(--accent-border), 0 0 24px -8px rgba(13, 148, 136, 0.4);
+}

@@ -15,18 +15,19 @@ A modern, responsive personal portfolio website showcasing my skills, experience
 ## 🚀 Technologies Used
 
 - **HTML5**: Semantic markup and structure
-- **CSS3**: Modern styling with CSS variables and animations
-- **JavaScript (ES6+)**: Interactive features and theme management
+- **CSS3**: Modular stylesheets with design tokens (CSS variables) and animations
+- **JavaScript (ES Modules)**: Interactive features split into focused modules
 - **Font Awesome**: Icons for enhanced visual appeal
-- **Google Fonts**: Inter font family for typography
+- **Google Fonts**: Inter (UI) and JetBrains Mono (dates/tags) typography
 
 ## 📱 Sections
 
 1. **Hero Section**: Introduction with profile photo and call-to-action buttons
 2. **About**: Personal description and technical skills organized by category
-3. **Experience**: Professional experience and competitions with technology tags
-4. **Projects**: Featured projects with descriptions, technologies, and GitHub links
-5. **Contact**: Contact information including LinkedIn, GitHub, email, and phone
+3. **Experience**: Work, leadership and fellowship roles on a scroll-driven timeline
+4. **Competitions**: Contests and hackathons with award badges
+5. **Projects**: Featured projects with descriptions, technologies, and links
+6. **Contact**: Contact information including email, LinkedIn, and GitHub
 
 ## 🎨 Design Features
 
@@ -61,45 +62,71 @@ The portfolio includes a fully functional dark mode that:
 
 ## 🚀 Getting Started
 
-1. **Clone or Download**: Get the portfolio files
-2. **Open index.html**: Open the main HTML file in a web browser
-3. **Customize**: Modify content, colors, and styling as needed
-4. **Deploy**: Upload to your web hosting service
+The site uses native ES modules, so it must be served over HTTP (opening
+`index.html` directly via `file://` will block the module imports). Any static
+server works:
+
+```bash
+# From the project root
+python3 -m http.server 5500
+# then open http://localhost:5500
+```
+
+Then deploy the folder as-is to any static host (GitHub Pages, Netlify, etc.).
 
 ## 📁 File Structure
 
 ```
 portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and themes
-├── script.js           # JavaScript functionality
-├── me_photo.jpg        # Profile photo
-└── README.md           # This file
+├── index.html              # Page markup and section scaffolding
+├── css/
+│   ├── main.css            # Entry stylesheet (imports the rest)
+│   ├── tokens.css          # Theme color tokens (light + dark)
+│   ├── base.css            # Reset, typography, a11y helpers
+│   ├── navbar.css          # Navigation bar
+│   ├── hero.css            # Hero section + buttons
+│   ├── about.css           # About + skills
+│   ├── timeline.css        # Timeline rail, cards, logos, badges
+│   ├── contact.css         # Contact + footer
+│   └── responsive.css      # Media queries + scroll progress bar
+├── js/
+│   ├── main.js             # Entry point — wires modules together
+│   ├── data/portfolio.js   # Single source of truth for all content
+│   └── modules/
+│       ├── render.js       # Renders sections from data
+│       ├── theme.js        # Light/dark theme toggle
+│       ├── navigation.js   # Smooth scroll + navbar + keyboard nav
+│       ├── timeline.js     # Scroll-driven timeline fill + reveals
+│       └── effects.js      # Typing, scroll progress, ripple
+├── assets/
+│   ├── me_photo.jpg        # Profile photo
+│   └── christopher_chantres_resume.pdf
+└── README.md               # This file
 ```
 
 ## 🎨 Customization
 
+### Content
+All content lives in `js/data/portfolio.js`. Update the `experience`,
+`competitions`, and `projects` arrays to change what appears on each timeline.
+Each item supports `current`, `featured`, `award`, `link`, and a `logo`
+(initials placeholder). To use a real brand logo, add `logoSrc: 'assets/logos/uber.svg'`
+to an item and the renderer will use the image instead of the initials.
+
 ### Colors
-Modify the CSS variables in `styles.css` to change the color scheme:
+Modify the CSS variables in `css/tokens.css` to change the color scheme:
 
 ```css
-:root {
-    --accent-primary: #3b82f6;    /* Primary blue */
-    --accent-secondary: #1e40af;  /* Darker blue */
-    --bg-primary: #ffffff;        /* Background */
-    --text-primary: #1e293b;      /* Text color */
+[data-theme='dark'] {
+    --accent-primary: #2dd4bf;   /* teal */
+    --accent-secondary: #22d3ee; /* cyan */
+    --bg-primary: #070b10;       /* near-black background */
+    --text-primary: #e6f1ee;     /* primary text */
 }
 ```
 
-### Content
-Update the HTML content in `index.html` to reflect your information:
-- Personal details
-- Experience and projects
-- Contact information
-- Skills and technologies
-
 ### Images
-Replace `me_photo.jpg` with your own profile photo (recommended size: 300x300px)
+Replace `assets/me_photo.jpg` with your own profile photo (recommended size: 300x300px).
 
 ## 🌐 Browser Support
 
@@ -120,10 +147,10 @@ Replace `me_photo.jpg` with your own profile photo (recommended size: 300x300px)
 
 To modify or extend the portfolio:
 
-1. **HTML Structure**: Update content in `index.html`
-2. **Styling**: Modify `styles.css` for visual changes
-3. **Functionality**: Add features in `script.js`
-4. **Testing**: Test across different devices and browsers
+1. **Content**: Update the data arrays in `js/data/portfolio.js`
+2. **Styling**: Edit the relevant file in `css/` (tokens for colors)
+3. **Functionality**: Add or adjust a module in `js/modules/`
+4. **Testing**: Serve over HTTP and test across devices and browsers
 
 ## 📄 License
 
@@ -135,7 +162,7 @@ Feel free to fork this project and customize it for your own portfolio. Contribu
 
 ## 📞 Contact
 
-- **Email**: too.chantres@gmail.com
+- **Email**: tool.chantres@gmail.com
 - **LinkedIn**: [Christopher Chantres](https://www.linkedin.com/in/christopher-chantres)
 - **GitHub**: [ChristopherChantres](https://github.com/ChristopherChantres)
 
